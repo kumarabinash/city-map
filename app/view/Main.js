@@ -3,7 +3,8 @@ Ext.define('CityMap.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
-        'Ext.Map'
+        'Ext.Map',
+        'Ext.field.Search'
     ],
     config: {
         tabBarPosition: 'bottom',
@@ -41,8 +42,15 @@ Ext.define('CityMap.view.Main', {
                 items: [
                     {
                         docked: 'top',
-                        xtype: 'titlebar',
-                        title: 'Map of your city'
+                        xtype: 'toolbar',
+                        title: 'Map of your city',
+                        items:[
+                            {
+                                xtype: 'searchfield',
+                                placeholder: 'Search your city',
+                                name: 'cityname'
+                            }
+                        ]
                     }
                 ]
             }
