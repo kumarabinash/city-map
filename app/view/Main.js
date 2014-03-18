@@ -35,6 +35,7 @@ Ext.define('CityMap.view.Main', {
                 xtype: 'map',
                 useCurrentLocation: true,
                 mapOptions: {
+                    center: new google.maps.LatLng(20.000,85.000),
                     zoom: 13,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 },
